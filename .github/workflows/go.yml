@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: shallow clone
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       if: "!startsWith(github.ref, 'refs/tags/')"
 
     - name: deep clone
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       if: startsWith(github.ref, 'refs/tags/')
       with:
         fetch-depth: 0
@@ -55,7 +55,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/carapace-sh/mdbook
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: "build docs"
         run: mdbook build docs
 
