@@ -2,10 +2,11 @@ github.com/carapace-sh/carapace v1.8.6 h1:nYHFcooPyN7ZlAsr21sHKAkkpAYOEPkSO2S6/L
 github.com/carapace-sh/carapace v1.8.6/go.mod h1:C0PH0NpNW+Gb2nvnJ8nl2yRvvPxEHqVgYU8fphWGoEg=
 github.com/carapace-sh/carapace-bridge v1.4.1 h1:9bsRatcOLP/PxAxL3TgMhouWI0FPRLJ33drgmvBY20c=
 github.com/carapace-sh/carapace-bridge v1.4.1/go.mod h1:R7+2Oyb/AI6HqWTtHR4h0OO0xrsoyw59xkIEgFCmcBM=
-github.com/carapace-sh/carapace-shlex v1.0.1 h1:ww0JCgWpOVuqWG7k3724pJ18Lq8gh5pHQs9j3ojUs1c=
 github.com/carapace-sh/carapace-shlex v1.0.1/go.mod h1:lJ4ZsdxytE0wHJ8Ta9S7Qq0XpjgjU0mdfCqiI2FHx7M=
-github.com/carapace-sh/carapace-spec v1.2.0 h1:mkf9NW7OX0cj5Inz5cNH8Ap1Xz1+rBj0KZ9dUtmudIw=
-github.com/carapace-sh/carapace-spec v1.2.0/go.mod h1:XTXh9L81G9V/rTnKF6t/5rpPwNSKebFegk6VrRp/8tM=
+github.com/carapace-sh/carapace-shlex v1.1.0 h1:58QSJTUxghpa/rEn6+Z9UM/Hy0ipVHDUn9S1mp4i+ZE=
+github.com/carapace-sh/carapace-shlex v1.1.0/go.mod h1:lJ4ZsdxytE0wHJ8Ta9S7Qq0XpjgjU0mdfCqiI2FHx7M=
+github.com/carapace-sh/carapace-spec v1.3.0 h1:h46IZN/K78k3iYHJvdL3G4hMF7Og3q4i5ZuZ2IAsowA=
+github.com/carapace-sh/carapace-spec v1.3.0/go.mod h1:/bKL19v/OSgrchQHoLwcKUO7WvYL/FNXWO2KAIUWBHo=
 github.com/cpuguy83/go-md2man/v2 v2.0.6/go.mod h1:oOW0eioCTA6cOiMLiUPZOpcVxMig6NIQQ7OS05n1F4g=
 github.com/cyphar/filepath-securejoin v0.4.1 h1:JyxxyPEaktOD+GAnqIqTf9A8tHyAG22rowi7HkoSU1s=
 github.com/cyphar/filepath-securejoin v0.4.1/go.mod h1:Sdj7gXlvMcPZsbhwhQ33GguGLDGQL7h7bg04C/+u9jI=
@@ -38,8 +39,9 @@ github.com/rogpeppe/go-internal v1.14.1/go.mod h1:MaRKkUm5W0goXpeCfT7UZI6fk/L7L7
 github.com/russross/blackfriday/v2 v2.1.0/go.mod h1:+Rmxgy9KzJVeS9/2gXHxylqXiyQDYRxCVz55jmeOWTM=
 github.com/spf13/cobra v1.9.1 h1:CXSaggrXdbHK9CF+8ywj8Amf7PBRmPCOJugH954Nnlo=
 github.com/spf13/cobra v1.9.1/go.mod h1:nDyEzZ8ogv936Cinf6g1RU9MRY64Ir93oCnqb9wxYW0=
-github.com/spf13/pflag v1.0.6 h1:jFzHGLGAlb3ruxLB8MhbI6A8+AQX/2eW4qeyNZXNp2o=
 github.com/spf13/pflag v1.0.6/go.mod h1:McXfInJRrz4CZXVZOBLb0bTZqETkiAhM9Iw0y3An2Bg=
+github.com/spf13/pflag v1.0.7 h1:vN6T9TfwStFPFM5XzjsvmzZkLuaLX+HS+0SeFLRgU6M=
+github.com/spf13/pflag v1.0.7/go.mod h1:McXfInJRrz4CZXVZOBLb0bTZqETkiAhM9Iw0y3An2Bg=
 github.com/stretchr/testify v1.10.0 h1:Xv5erBjTwe/5IxqUQTdXv5kgmIvbHo3QQyRwhJsOfJA=
 github.com/stretchr/testify v1.10.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf8C91i36aY=
 golang.org/x/exp v0.0.0-20240719175910-8a7402abbf56 h1:2dVuKD2vS7b0QIHQbpyTISPd0LeHDbnYEryqj5Q1ug8=
