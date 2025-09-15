@@ -1,5 +1,5 @@
-github.com/carapace-sh/carapace v1.8.7 h1:U9jNL7rtAx3vD3iOSjHjB5Bmx1anYa2focy+QjolcW8=
-github.com/carapace-sh/carapace v1.8.7/go.mod h1:3IP+VHyb0EC8jaNX+LZ5lu8NkbQF4DlWKSyn07r0ZwE=
+github.com/carapace-sh/carapace v1.8.8 h1:7K+kJ4SPKtevxlbiVoCpqxK5F0ZFDGhxJ4H30xunTd8=
+github.com/carapace-sh/carapace v1.8.8/go.mod h1:Zs3DpsawpFm+8fEfRVYE9EzMBYH8u7S3Aw9yAAKX0JM=
 github.com/carapace-sh/carapace-bridge v1.4.4 h1:6k3kJKU41I13RTLE5P/acGpnIgT9UhflozPK5+m0DK8=
 github.com/carapace-sh/carapace-bridge v1.4.4/go.mod h1:K89hWRt7VOuOS40NzDitk2Z7Q4ZBPEiytoyGdEoO07E=
 github.com/carapace-sh/carapace-shlex v1.1.0 h1:58QSJTUxghpa/rEn6+Z9UM/Hy0ipVHDUn9S1mp4i+ZE=
@@ -40,7 +40,6 @@ github.com/spf13/cobra v1.9.1/go.mod h1:nDyEzZ8ogv936Cinf6g1RU9MRY64Ir93oCnqb9wx
 github.com/spf13/cobra v1.10.1 h1:lJeBwCfmrnXthfAupyUTzJ/J4Nc1RsHC/mSRU2dll/s=
 github.com/spf13/cobra v1.10.1/go.mod h1:7SmJGaTHFVBY0jW4NXGluQoLvhqFQM+6XSKD+P4XaB0=
 github.com/spf13/pflag v1.0.6/go.mod h1:McXfInJRrz4CZXVZOBLb0bTZqETkiAhM9Iw0y3An2Bg=
-github.com/spf13/pflag v1.0.7/go.mod h1:McXfInJRrz4CZXVZOBLb0bTZqETkiAhM9Iw0y3An2Bg=
 github.com/spf13/pflag v1.0.9 h1:9exaQaMOCwffKiiiYk6/BndUBv+iRViNW+4lEMi0PvY=
 github.com/spf13/pflag v1.0.9/go.mod h1:McXfInJRrz4CZXVZOBLb0bTZqETkiAhM9Iw0y3An2Bg=
 github.com/stretchr/testify v1.10.0 h1:Xv5erBjTwe/5IxqUQTdXv5kgmIvbHo3QQyRwhJsOfJA=
