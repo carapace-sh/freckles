@@ -5,7 +5,7 @@ go 1.23.1
 toolchain go1.24.1
 
 require (
-	github.com/carapace-sh/carapace v1.10.1
+	github.com/carapace-sh/carapace v1.10.2
 	github.com/carapace-sh/carapace-bridge v1.4.8
 	github.com/carapace-sh/carapace-spec v1.3.5
 	github.com/go-git/go-billy/v5 v5.6.2
@@ -14,7 +14,7 @@ require (
 )
 
 require (
-	github.com/carapace-sh/carapace-shlex v1.1.0 // indirect
+	github.com/carapace-sh/carapace-shlex v1.1.1 // indirect
 	github.com/cyphar/filepath-securejoin v0.4.1 // indirect
 	github.com/go-git/gcfg v1.5.1-0.20230307220236-3a3c6141e376 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
