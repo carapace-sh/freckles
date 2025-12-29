@@ -1,11 +1,11 @@
 module github.com/carapace-sh/freckles
 
-go 1.23.1
+go 1.24
 
 toolchain go1.24.1
 
 require (
-	github.com/carapace-sh/carapace v1.10.3
+	github.com/carapace-sh/carapace v1.11.0
 	github.com/carapace-sh/carapace-bridge v1.4.11
 	github.com/carapace-sh/carapace-spec v1.4.2
 	github.com/go-git/go-billy/v5 v5.7.0
