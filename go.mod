@@ -8,7 +8,7 @@ require (
 	github.com/carapace-sh/carapace v1.11.1
 	github.com/carapace-sh/carapace-bridge v1.5.3
 	github.com/carapace-sh/carapace-spec v1.5.0
-	github.com/go-git/go-billy/v5 v5.7.0
+	github.com/go-git/go-billy/v5 v5.8.0
 	github.com/go-git/go-git/v5 v5.16.5
 	github.com/spf13/cobra v1.10.2
 )
