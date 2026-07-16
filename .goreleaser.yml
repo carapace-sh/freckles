@@ -43,7 +43,7 @@ aurs:
 nfpms:
   -
     description: "A simple dotfile manager."
-    homepage: "https://github.com/rsteube/freckles"
+    homepage: "https://github.com/carapace-sh/freckles"
     license: "MIT"
     maintainer: rsteube <rsteube@users.noreply.github.com>
     formats:

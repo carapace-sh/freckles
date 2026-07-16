@@ -3,6 +3,7 @@ package cmd
 import (
 	"os"
 	"os/exec"
+	"path/filepath"
 	"runtime"
 
 	"github.com/carapace-sh/carapace"
@@ -16,12 +17,12 @@ var editCmd = &cobra.Command{
 	Use:   "edit [FILE]",
 	Short: "edit a dotfile",
 	Args:  cobra.ExactArgs(1),
-	Run: func(cmd *cobra.Command, args []string) {
-		c := exec.Command(editor(), freckles.Dir()+"/"+args[0])
+	RunE: func(cmd *cobra.Command, args []string) error {
+		c := exec.Command(editor(), filepath.Join(freckles.Dir(), args[0]))
 		c.Stdin = os.Stdin
 		c.Stdout = os.Stdout
 		c.Stderr = os.Stderr
-		c.Run()
+		return c.Run()
 	},
 }
 
