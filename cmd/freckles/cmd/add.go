@@ -1,6 +1,8 @@
 package cmd
 
 import (
+	"fmt"
+
 	"github.com/carapace-sh/carapace"
 	"github.com/carapace-sh/carapace/pkg/traverse"
 	"github.com/carapace-sh/freckles/pkg/freckles"
@@ -12,13 +14,14 @@ var addCmd = &cobra.Command{
 	Use:   "add [FILE]...",
 	Short: "add dotfiles",
 	Args:  cobra.MinimumNArgs(1),
-	Run: func(cmd *cobra.Command, args []string) {
+	RunE: func(cmd *cobra.Command, args []string) error {
 		for _, arg := range args {
 			freckle := freckles.Freckle{Path: arg}
 			if err := freckle.Add(false); err != nil {
-				println(err.Error())
+				return fmt.Errorf("%s: %w", arg, err)
 			}
 		}
+		return nil
 	},
 }
 

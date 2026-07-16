@@ -1,6 +1,8 @@
 package cmd
 
 import (
+	"fmt"
+
 	"github.com/carapace-sh/carapace"
 	"github.com/carapace-sh/freckles/cmd/freckles/cmd/action"
 	"github.com/carapace-sh/freckles/pkg/freckles"
@@ -11,10 +13,10 @@ var linkCmd = &cobra.Command{
 	Use:   "link",
 	Short: "link dotfiles",
 	Args:  cobra.NoArgs,
-	Run: func(cmd *cobra.Command, args []string) {
-		freckles.Walk(func(freckle freckles.Freckle) error {
+	RunE: func(cmd *cobra.Command, args []string) error {
+		return freckles.Walk(func(freckle freckles.Freckle) error {
 			if err := freckle.Symlink(false); err != nil {
-				println(err.Error())
+				return fmt.Errorf("%s: %w", freckle.Path, err)
 			}
 			return nil
 		})
@@ -24,7 +26,6 @@ var linkCmd = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(linkCmd)
 
-	// TODO update command to only link given freckle
 	carapace.Gen(linkCmd).PositionalAnyCompletion(
 		action.ActionFreckles(),
 	)

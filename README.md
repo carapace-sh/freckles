@@ -1,8 +1,8 @@
 # freckles
 
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/rsteube/freckles)](https://pkg.go.dev/github.com/rsteube/freckles)
-[![GoReportCard](https://goreportcard.com/badge/github.com/rsteube/freckles)](https://goreportcard.com/report/github.com/rsteube/freckles)
-[![Coverage Status](https://coveralls.io/repos/github/rsteube/freckles/badge.svg?branch=master)](https://coveralls.io/github/rsteube/freckles?branch=master)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/carapace-sh/freckles)](https://pkg.go.dev/github.com/carapace-sh/freckles)
+[![GoReportCard](https://goreportcard.com/badge/github.com/carapace-sh/freckles)](https://goreportcard.com/report/github.com/carapace-sh/freckles)
+[![Coverage Status](https://coveralls.io/repos/github/carapace-sh/freckles/badge.svg?branch=master)](https://coveralls.io/github/carapace-sh/freckles?branch=master)
 [![documentation](https://img.shields.io/badge/&zwnj;-documentation-blue?logo=gitbook)](https://freckles.carapace.sh)
 [![Packaging status](https://repology.org/badge/tiny-repos/freckles.svg)](https://repology.org/project/freckles/versions)
 
