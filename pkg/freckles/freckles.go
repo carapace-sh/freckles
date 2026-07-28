@@ -15,7 +15,7 @@ import (
 var home string
 
 func Dir() string {
-	return home + "/.local/share/freckles/"
+	return filepath.Join(home, ".local", "share", "freckles")
 }
 
 func init() {
@@ -37,28 +37,45 @@ func (f *Freckle) FrecklePath() string {
 	return filepath.Join(Dir(), f.Path)
 }
 
-func (d *Freckle) Add(force bool) (err error) {
-	if !d.Verify() {
-		var stat os.FileInfo
-		if _, err = os.Stat(d.FrecklePath()); os.IsNotExist(err) || force {
-			if stat, err = os.Stat(d.HomePath()); err == nil {
-				if stat.IsDir() {
-					err = fmt.Errorf("%v is a directory", d.HomePath())
-				} else {
-					_ = os.MkdirAll(filepath.Dir(d.FrecklePath()), os.ModePerm)
-					if err = os.Rename(d.HomePath(), d.FrecklePath()); err == nil {
-						err = d.Symlink(force)
-					}
-				}
-			}
-		}
+func (d *Freckle) Add(force bool) error {
+	if d.Verify() {
+		return nil
 	}
-	return
+
+	stat, err := os.Stat(d.FrecklePath())
+	if err == nil && stat.IsDir() {
+		return fmt.Errorf("%v is a directory", d.FrecklePath())
+	}
+	if err != nil && !os.IsNotExist(err) {
+		return err
+	}
+	if err == nil && !force {
+		return fmt.Errorf("%v already exists", d.FrecklePath())
+	}
+
+	stat, err = os.Stat(d.HomePath())
+	if err != nil {
+		return err
+	}
+	if stat.IsDir() {
+		return fmt.Errorf("%v is a directory", d.HomePath())
+	}
+
+	if err := os.MkdirAll(filepath.Dir(d.FrecklePath()), os.ModePerm); err != nil {
+		return err
+	}
+	if err := os.Rename(d.HomePath(), d.FrecklePath()); err != nil {
+		return err
+	}
+	return d.Symlink(force)
 }
 
 func (d *Freckle) Symlink(force bool) error {
 	if err := os.MkdirAll(filepath.Dir(d.HomePath()), os.ModePerm); err != nil {
 		return err
+	}
+	if force {
+		_ = os.Remove(d.HomePath())
 	}
 	return os.Symlink(d.FrecklePath(), d.HomePath())
 }
@@ -77,12 +94,16 @@ func (d *Freckle) Verify() (ok bool) {
 func Walk(walkfunc func(freckle Freckle) error) error {
 	matcher, err := frecklesIgnore()
 	if err != nil {
-		println(err.Error()) // TODO remove
 		return err
 	}
 
 	return filepath.Walk(Dir(), func(path string, info os.FileInfo, err error) error {
-		if matcher.Match([]string{strings.TrimPrefix(path, Dir())}, info.IsDir()) {
+		if err != nil {
+			return err
+		}
+
+		relPath := strings.TrimPrefix(path, Dir())
+		if matcher.Match([]string{relPath}, info.IsDir()) {
 			if info.IsDir() {
 				return filepath.SkipDir
 			}
@@ -90,7 +111,7 @@ func Walk(walkfunc func(freckle Freckle) error) error {
 		}
 
 		if !info.IsDir() {
-			walkfunc(Freckle{Path: strings.TrimPrefix(path, Dir())})
+			return walkfunc(Freckle{Path: relPath})
 		}
 		return nil
 	})
@@ -117,6 +138,9 @@ func readIgnoreFile(fs billy.Filesystem, path []string, ignoreFile string) (ps [
 			if !strings.HasPrefix(s, commentPrefix) && len(strings.TrimSpace(s)) > 0 {
 				ps = append(ps, gitignore.ParsePattern(s, path))
 			}
+		}
+		if err := scanner.Err(); err != nil {
+			return nil, err
 		}
 	} else if !os.IsNotExist(err) {
 		return nil, err

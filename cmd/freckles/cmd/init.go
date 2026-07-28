@@ -3,6 +3,7 @@ package cmd
 import (
 	"os"
 	"os/exec"
+	"path/filepath"
 
 	"github.com/carapace-sh/carapace"
 	spec "github.com/carapace-sh/carapace-spec"
@@ -26,8 +27,8 @@ var initCmd = &cobra.Command{
 			return err
 		}
 
-		if _, err := os.Stat(freckles.Dir() + ".frecklesignore"); os.IsNotExist(err) {
-			return os.WriteFile(freckles.Dir()+".frecklesignore", []byte(".git\n.frecklesignore\n"), os.ModePerm)
+		if _, err := os.Stat(filepath.Join(freckles.Dir(), ".frecklesignore")); os.IsNotExist(err) {
+			return os.WriteFile(filepath.Join(freckles.Dir(), ".frecklesignore"), []byte(".git\n.frecklesignore\n"), os.ModePerm)
 		}
 		return nil
 	},

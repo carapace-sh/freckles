@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"fmt"
+	"path/filepath"
 
 	"github.com/carapace-sh/carapace"
 	"github.com/carapace-sh/carapace/pkg/style"
@@ -13,9 +14,9 @@ var verifyCmd = &cobra.Command{
 	Use:   "verify",
 	Short: "verify symlink status",
 	Args:  cobra.NoArgs,
-	Run: func(cmd *cobra.Command, args []string) {
-		freckles.Walk(func(freckle freckles.Freckle) error {
-			_style := style.ForPathExt(freckles.Dir()+"/"+freckle.Path, carapace.NewContext(args...))
+	RunE: func(cmd *cobra.Command, args []string) error {
+		return freckles.Walk(func(freckle freckles.Freckle) error {
+			_style := style.ForPathExt(filepath.Join(freckles.Dir(), freckle.Path), carapace.NewContext(args...))
 			if freckle.Verify() {
 				fmt.Printf("[%v] %v\n", format("OK", style.Green), format(freckle.Path, _style))
 			} else {

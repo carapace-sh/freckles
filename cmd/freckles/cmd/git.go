@@ -15,12 +15,12 @@ var gitCmd = &cobra.Command{
 	Use:                "git",
 	Short:              "invoke git on freckles directory",
 	DisableFlagParsing: true,
-	Run: func(cmd *cobra.Command, args []string) {
+	RunE: func(cmd *cobra.Command, args []string) error {
 		c := exec.Command("git", append([]string{"-C", freckles.Dir()}, args...)...)
 		c.Stdin = os.Stdin
 		c.Stdout = os.Stdout
 		c.Stderr = os.Stderr
-		c.Run()
+		return c.Run()
 	},
 }
 
