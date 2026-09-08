@@ -3,9 +3,9 @@ module github.com/carapace-sh/freckles
 go 1.25.0
 
 require (
-	github.com/carapace-sh/carapace v1.15.3
+	github.com/carapace-sh/carapace v1.16.0
 	github.com/carapace-sh/carapace-bridge v1.6.4
-	github.com/carapace-sh/carapace-spec v1.8.1
+	github.com/carapace-sh/carapace-spec v1.9.0
 	github.com/go-git/go-billy/v5 v5.9.1
 	github.com/go-git/go-git/v5 v5.19.2
 	github.com/spf13/cobra v1.10.2
