@@ -6,8 +6,8 @@ github.com/carapace-sh/carapace-shlex v1.1.1 h1:ccmNeetAYZOk4IcV36youFDsXusT9uCN
 github.com/carapace-sh/carapace-shlex v1.1.1/go.mod h1:lJ4ZsdxytE0wHJ8Ta9S7Qq0XpjgjU0mdfCqiI2FHx7M=
 github.com/carapace-sh/carapace-shlex/v2 v2.0.0 h1:pVhuYf1n9VLDCLo5m9xzo1N1+NZENnArXSzCNUTtnY4=
 github.com/carapace-sh/carapace-shlex/v2 v2.0.0/go.mod h1:07CXBqTrzzdZRgkFRpnDQ9zvIcGbKppjmaxNLyP+zgY=
-github.com/carapace-sh/carapace-spec v1.9.0 h1:x/ufsyREoW2zxuMFdnGh/j1aJW9ywoGnRc4qJXhffaU=
-github.com/carapace-sh/carapace-spec v1.9.0/go.mod h1:IdOQmzDeIl5bWEZJLpM9Feix8xS078VZu0W2r99eTlI=
+github.com/carapace-sh/carapace-spec v1.10.0 h1:HZfoAtegDCRO8XYH6r/ooft8qdXKuWcsQ4g6f69Ho3Q=
+github.com/carapace-sh/carapace-spec v1.10.0/go.mod h1:skMC7y5/84ZK4/P5y1ZtNQC8AdFX5v2lUc1ztd/0u5Y=
 github.com/cpuguy83/go-md2man/v2 v2.0.6/go.mod h1:oOW0eioCTA6cOiMLiUPZOpcVxMig6NIQQ7OS05n1F4g=
 github.com/cyphar/filepath-securejoin v0.6.1 h1:5CeZ1jPXEiYt3+Z6zqprSAgSWiggmpVyciv8syjIpVE=
 github.com/cyphar/filepath-securejoin v0.6.1/go.mod h1:A8hd4EnAeyujCJRrICiOWqjS1AX0a9kM5XL+NwKoYSc=
