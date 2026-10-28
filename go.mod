@@ -4,7 +4,7 @@ go 1.26.0
 
 require (
 	github.com/carapace-sh/carapace v1.17.0
-	github.com/carapace-sh/carapace-bridge v1.7.0
+	github.com/carapace-sh/carapace-bridge v1.8.0
 	github.com/carapace-sh/carapace-spec v1.10.0
 	github.com/go-git/go-billy/v5 v5.9.2
 	github.com/go-git/go-git/v5 v5.19.3
@@ -12,7 +12,6 @@ require (
 )
 
 require (
-	github.com/carapace-sh/carapace-shlex v1.1.1 // indirect
 	github.com/carapace-sh/carapace-shlex/v2 v2.0.0 // indirect
 	github.com/cyphar/filepath-securejoin v0.6.1 // indirect
 	github.com/go-git/gcfg v1.5.1-0.20230307220236-3a3c6141e376 // indirect
