@@ -3,7 +3,7 @@ module github.com/carapace-sh/freckles
 go 1.26.0
 
 require (
-	github.com/carapace-sh/carapace v1.17.0
+	github.com/carapace-sh/carapace v1.17.1
 	github.com/carapace-sh/carapace-bridge v1.8.0
 	github.com/carapace-sh/carapace-spec v1.10.0
 	github.com/go-git/go-billy/v5 v5.9.2
@@ -12,7 +12,7 @@ require (
 )
 
 require (
-	github.com/carapace-sh/carapace-shlex/v2 v2.0.0 // indirect
+	github.com/carapace-sh/carapace-shlex/v2 v2.1.2 // indirect
 	github.com/cyphar/filepath-securejoin v0.6.1 // indirect
 	github.com/go-git/gcfg v1.5.1-0.20230307220236-3a3c6141e376 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
