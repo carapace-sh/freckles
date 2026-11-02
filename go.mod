@@ -5,7 +5,7 @@ go 1.26.0
 require (
 	github.com/carapace-sh/carapace v1.17.1
 	github.com/carapace-sh/carapace-bridge v1.8.0
-	github.com/carapace-sh/carapace-spec v1.10.0
+	github.com/carapace-sh/carapace-spec v1.10.1
 	github.com/go-git/go-billy/v5 v5.9.2
 	github.com/go-git/go-git/v5 v5.19.3
 	github.com/spf13/cobra v1.10.2
