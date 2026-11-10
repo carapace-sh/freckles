@@ -3,7 +3,7 @@ module github.com/carapace-sh/freckles
 go 1.26.0
 
 require (
-	github.com/carapace-sh/carapace v1.18.0
+	github.com/carapace-sh/carapace v1.18.1
 	github.com/carapace-sh/carapace-bridge v1.8.1
 	github.com/carapace-sh/carapace-spec v1.10.2
 	github.com/go-git/go-billy/v5 v5.9.2
@@ -18,7 +18,7 @@ require (
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
 	github.com/spf13/pflag v1.0.10 // indirect
-	go.yaml.in/yaml/v3 v3.0.5 // indirect
+	go.yaml.in/yaml/v3 v3.0.6 // indirect
 	golang.org/x/net v0.57.0 // indirect
 	golang.org/x/sys v0.47.0 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
