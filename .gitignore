@@ -1,4 +1,6 @@
 cmd/freckles/freckles
 docs/book
+docs/src/asciinema
+docs/theme/catppuccin.css
 dist
 profile.cov
